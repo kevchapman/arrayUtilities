@@ -1,0 +1,53 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>ArrayUtilities</title>
+	<link rel="stylesheet" href="bower_components/bootstrap.css/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/arrayutilities.css">
+</head>
+<body>
+	<div class="container">
+		<div class="hero-unit">
+			<h1>arrayUtilities</h1>
+			<p>A collection of helpful array functions</p>
+		</div>
+	</div>
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="js/arrayutilities.js"></script>
+	<script>
+		var array1 = [
+			'one',
+			'two',
+			'three',
+			'four'
+		];
+		var array2 = [
+			{
+				name:'name1',
+				age:22
+			},
+			{
+				name:'name2',
+				age:18
+			},
+			{
+				name:'name3',
+				age:22
+			},
+			{
+				name:'name1',
+				age:8
+			}
+		]
+		console.log(array2.containsProp('name','name1'))
+		console.log(array2.containsProp('name','dsgd'))
+		var x = array2.containsProp('name','name1').length ? true : false;
+		console.log(x);
+	</script>
+</body>
+</html>
